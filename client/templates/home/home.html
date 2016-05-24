@@ -1,0 +1,54 @@
+<template name="home">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Project name</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        {{> loginButtons}} <!-- here -->
+      </ul>
+    </div>
+  </div>
+  <h5>Home</h5>
+  <div class="all-movies row">
+
+    {{#each movies}}
+    <div class="movie col-xs-6 col-md-4">
+      <div class="movie-container">
+        <a href="/movie/{{_id}}" class="thumbnail">
+          <img src="http://lorempicsum.com/futurama/350/200/{{index}}" alt="{{Title}}">
+        </a>
+        <div class="caption">
+          <h3><a href="/movie/{{_id}}">{{Title}}</a></h3>
+          <p class="line1">
+            <span class="rating">
+              <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+              <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+              <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
+              <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+              <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
+              <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+              <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+              <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+              <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+              <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+            </span>
+            | <span>{{Type}}</span> | <span> {{Year}}</span>
+          </p>
+          <p>The movie {{Title }} is a {{Type}} who was made in {{Year}} By {{Prod}}</p>
+          <p>
+            <span class="firstBtn"><button class="btn btn-primary up">VoteUp</button></span>
+            <span class="secBtn"><button class="btn btn-default down">VoteDown</button></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</template>

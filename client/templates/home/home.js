@@ -11,8 +11,15 @@ Template.home.events({
   'click .down'(event){
     vote('down',this._id)
   }
+});
+Template.home.helpers({
+
 })
 
+/* SignUp With Username */
+Accounts.ui.config({
+  passwordSignupFields: "USERNAME_ONLY"
+});
 
 function vote(type,movieID){
   var user = Meteor.user();
@@ -27,20 +34,3 @@ function vote(type,movieID){
     bootbox.alert('Log in first');
   }
 }
-// Template.hello.onCreated(function helloOnCreated() {
-//   // counter starts at 0
-//   this.counter = new ReactiveVar(0);
-// });
-//
-// Template.hello.helpers({
-//   counter() {
-//     return Template.instance().counter.get();
-//   },
-// });
-//
-// Template.hello.events({
-//   'click button'(event, instance) {
-//     // increment the counter when button is clicked
-//     instance.counter.set(instance.counter.get() + 1);
-//   },
-// });
