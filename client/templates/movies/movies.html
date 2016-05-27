@@ -1,0 +1,22 @@
+<template name="movies">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">Categories</p>
+
+            <div class="list-group">
+                <a href="#" class="list-group-item">Category 1</a>
+                <a href="#" class="list-group-item">Category 2</a>
+                <a href="#" class="list-group-item">Category 3</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                {{> oneMovie }}
+                {{> oneMovie }}
+                {{> oneMovie }}
+                {{> oneMovie }}
+            </div>
+        </div>
+
+    </div>
+</template>
