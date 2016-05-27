@@ -1,4 +1,4 @@
-export var movies = [
+export var seeds = [
   {
     'Title': 'John Wick',
     'Type': 'Action',
