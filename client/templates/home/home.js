@@ -7,24 +7,24 @@ Template.home.helpers({
 });
 
 Template.home.events({
-  'click .up'(event){
-    vote('up',this._id)
-  },
-  'click .down'(event){
-    vote('down',this._id)
-  }
+    'click .up'(){
+        vote('up', this._id)
+    },
+    'click .down'(){
+        vote('down', this._id)
+    }
 });
 
-function vote(type,movieID){
-  var user = Meteor.user();
-  if(user){
-    if(db.Voters.findOne({'userID' : user._id,'movieID' : movieID})){
-      bootbox.alert('You already voted in this movie.')
-    }else{
-      bootbox.alert('You voted')
-      db.Voters.insert({'userID' : user._id,'movieID':movieID})
+function vote(type, movieID) {
+    var user = Meteor.user();
+    if (user) {
+        if (db.Voters.findOne({'userID': user._id, 'movieID': movieID})) {
+            bootbox.alert('You already voted on this movie.')
+        } else {
+            bootbox.alert('Vote considered.');
+            db.Voters.insert({'userID': user._id, 'movieID': movieID, 'type': type})
+        }
+    } else {
+        bootbox.alert('Log in first');
     }
-  }else{
-    bootbox.alert('Log in first');
-  }
 }

@@ -47,29 +47,29 @@
         </thead>
         <tbody>
         {{#each data}}
-            <tr>
-                <th scope="row">{{_id}}
+        <tr>
+            <th scope="row">{{_id}}
 
-                </th>
-                <td>{{title}}</td>
-                <td>{{type}}</td>
-                <td>{{prod}}</td>
-                <td>{{year}}</td>
-                <td>{{rating}}</td>
-                <td>
-                    <button type="button" class="btn btn-xs btn-default editMovie">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </button>
-                    <button type="button" class="btn btn-xs btn-danger deleteMovie">
-                        <span class="glyphicon glyphicon-trash"></span>
-                    </button>
-                </td>
-            </tr>
+            </th>
+            <td>{{title}}</td>
+            <td>{{type}}</td>
+            <td>{{prod}}</td>
+            <td>{{year}}</td>
+            <td>{{rating}}</td>
+            <td>
+                <button type="button" class="btn btn-xs btn-default editMovie">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+                <button type="button" class="btn btn-xs btn-danger deleteMovie">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </td>
+        </tr>
         {{/each}}
         </tbody>
     </table>
     {{else}}
-      Hi ,You are in desert Bro, call <a href="/">911  !</a>
+    Hi ,You are in desert Bro, call <a href="/">911 !</a>
     {{/if}}
 
 

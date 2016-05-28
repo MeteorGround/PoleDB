@@ -3,8 +3,6 @@ import * as db from "../lib/collections";
 
 Meteor.startup(() => {
 
-    //
-
     // Populate Movies
     var moviesDB = db.Movies;
     moviesDB.remove({});

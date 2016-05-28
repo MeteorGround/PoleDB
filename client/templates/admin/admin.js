@@ -7,7 +7,6 @@ Template.admin.helpers({
     },
     isAdmin(){
       return !!(Meteor.user() && Meteor.user().username === "root");
-
     }
 });
 
