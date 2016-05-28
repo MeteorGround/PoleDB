@@ -3,22 +3,23 @@
         <thead>
         <tr>
             <td>
-
-            </td>
-            <td>
-                <input type="text" class="form-control" placeholder="Title">
+                <input type="text" class="form-control" placeholder="Title" id="title">
             </td>
 
             <td>
-                <input type="text" class="form-control" placeholder="Type">
+                <input type="text" class="form-control" placeholder="Type" id="type">
             </td>
 
             <td>
-                <input type="text" class="form-control" placeholder="Year">
+                <input type="text" class="form-control" placeholder="Prod" id="prod">
             </td>
 
             <td>
-                <button type="button" class="btn btn-success">
+                <input type="text" class="form-control" placeholder="Year" id="year">
+            </td>
+
+            <td>
+                <button type="button" class="btn btn-success" id="addMovie">
                     <span class="glyphicon glyphicon-plus"></span>
                 </button>
             </td>
@@ -27,18 +28,32 @@
             <th>#</th>
             <th>Title</th>
             <th>Type</th>
+            <th>Prod</th>
             <th>Year</th>
             <th>Rating</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>title</td>
-            <td>type</td>
-            <td>year</td>
-            <td>rating</td>
-        </tr>
+        {{#each data}}
+            <tr>
+                <th scope="row">{{_id}}
+
+                </th>
+                <td>{{title}}</td>
+                <td>{{type}}</td>
+                <td>{{prod}}</td>
+                <td>{{year}}</td>
+                <td>{{rating}}</td>
+                <td>
+                    <button type="button" class="btn btn-xs btn-default editMovie">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                    <button type="button" class="btn btn-xs btn-danger deleteMovie">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </td>
+            </tr>
+        {{/each}}
         </tbody>
     </table>
 </template>

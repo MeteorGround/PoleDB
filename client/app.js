@@ -1,1 +1,3 @@
-import * as db from "../collections/collections";
+import * as db from "../lib/collections";
+
+

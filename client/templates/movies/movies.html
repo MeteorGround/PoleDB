@@ -11,10 +11,9 @@
         </div>
         <div class="col-md-9">
             <div class="row">
-                {{> oneMovie }}
-                {{> oneMovie }}
-                {{> oneMovie }}
-                {{> oneMovie }}
+                {{#each movies }}
+                    {{> oneMovie }}
+                {{/each}}
             </div>
         </div>
 

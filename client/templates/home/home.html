@@ -16,10 +16,8 @@
         </div>
     </div>
     <div class="row text-center">
-        {{> oneMovie }}
-        {{> oneMovie }}
-        {{> oneMovie }}
-        {{> oneMovie }}
-        {{> oneMovie }}
+        {{#each movies }}
+            {{> oneMovie }}
+        {{/each}}
     </div>
 </template>

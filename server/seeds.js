@@ -1,44 +1,44 @@
 export var seeds = [
   {
-    'Title': 'John Wick',
-    'Type': 'Action',
-    'Prod': 'John',
-    'Year': '2016',
-    'Rating': '9.5'
+    'title': 'John Wick',
+    'type': 'Action',
+    'prod': 'John',
+    'year': '2016',
+    'rating': '9.5'
   },
   {
-    'Title': 'Civil War',
-    'Type': 'Comics',
-    'Prod': 'Cpt.America',
-    'Year': '2016',
-    'Rating': '4.5'
+    'title': 'Civil War',
+    'type': 'Comics',
+    'prod': 'Cpt.America',
+    'year': '2016',
+    'rating': '4.5'
   },
   {
-    'Title': 'Iron Man',
-    'Type': 'Casa',
-    'Prod': 'San Andreas',
-    'Year': '1992',
-    'Rating': '7.9'
+    'title': 'Iron Man',
+    'type': 'Casa',
+    'prod': 'San Andreas',
+    'year': '1992',
+    'rating': '7.9'
   },
   {
-    'Title': 'Into the wild',
-    'Type': 'Adventure',
-    'Prod': 'Akram',
-    'Year': '2014',
-    'Rating': '4.5'
+    'title': 'Into the wild',
+    'type': 'Adventure',
+    'prod': 'Akram',
+    'year': '2014',
+    'rating': '4.5'
   },
   {
-    'Title': 'Inside Out',
-    'Type': 'Animation',
-    'Prod': 'Le toi',
-    'Year': '2011',
-    'Rating': '9.9'
+    'title': 'Inside Out',
+    'type': 'Animation',
+    'prod': 'Le toi',
+    'year': '2011',
+    'rating': '9.9'
   },
   {
-    'Title': 'Lorem',
-    'Type': 'Ipsum',
-    'Prod': 'Dolor',
-    'Year': '2009',
-    'Rating': '10'
+    'title': 'Lorem',
+    'type': 'Ipsum',
+    'prod': 'Dolor',
+    'year': '2009',
+    'rating': '10'
   }
 ];
