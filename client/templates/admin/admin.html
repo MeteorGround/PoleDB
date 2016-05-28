@@ -2,6 +2,7 @@
     <table class="table table-bordered table-striped table-hover table-responsive">
         <thead>
         <tr>
+
             <td>
                 <input type="text" class="form-control" placeholder="Title" id="title">
             </td>
@@ -19,8 +20,17 @@
             </td>
 
             <td>
+                <input type="number" class="form-control" placeholder="Rating" id="rating">
+            </td>
+
+            <td>
                 <button type="button" class="btn btn-success" id="addMovie">
                     <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-default" id="clear">
+                    <span class="glyphicon glyphicon-remove"></span>
                 </button>
             </td>
         </tr>
@@ -31,6 +41,7 @@
             <th>Prod</th>
             <th>Year</th>
             <th>Rating</th>
+            <td>Edit</td>
         </tr>
         </thead>
         <tbody>

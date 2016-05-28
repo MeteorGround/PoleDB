@@ -14,6 +14,7 @@ Template.admin.events({
         let type = $('#type').val();
         let prod = $('#prod').val();
         let year = $('#year').val();
+        let rating = $('#rating').val();
         // Build the movie obj
         let newMovie = {title, type, prod, year};
         // Persist it
@@ -28,8 +29,18 @@ Template.admin.events({
             let type = $('#type').val();
             let prod = $('#prod').val();
             let year = $('#year').val();
+            let rating = $('#rating').val();
+
             // Save Changes
-            db.Movies.update(Session.get('id'), {$set: {title: title, type: type, prod: prod, year: year}});
+            db.Movies.update(Session.get('id'), {
+                $set: {
+                    title: title,
+                    type: type,
+                    prod: prod,
+                    year: year,
+                    rating: rating
+                }
+            });
 
             clearinputs();
         }
@@ -46,17 +57,28 @@ Template.admin.events({
         $('#type').val(movie.type);
         $('#prod').val(movie.prod);
         $('#year').val(movie.year);
+        $('#rating').val(movie.rating);
         // Change the ID attr of the button and it's expressive icon
         $('#addMovie').attr('id', 'updateMovie');
         $('#updateMovie').find('span').removeClass('glyphicon-plus').addClass('glyphicon-ok-sign');
+    },
+    'click #clear': function () {
+        // Clear Session and inputs
+        if (Session.get('id')) {
+            Session.get('id', null);
+        }
+        clearinputs();
     }
 
     // TODO : needs some expressive alert here
 });
+
 
 function clearinputs() {
     $('#title').val('');
     $('#type').val('');
     $('#prod').val('');
     $('#year').val('');
+    $('#rating').val('');
+    $('.btn-success').find('span').removeClass('glyphicon-ok-sign').addClass('glyphicon-plus');
 }
