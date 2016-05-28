@@ -6,10 +6,8 @@ Template.admin.helpers({
         return db.Movies.find();
     },
     isAdmin(){
-      if(Meteor.user() && Meteor.user().username === "root"){
-        return true;
-      }
-      return false;
+      return !!(Meteor.user() && Meteor.user().username === "root");
+
     }
 });
 
