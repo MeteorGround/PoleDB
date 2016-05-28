@@ -4,7 +4,7 @@ import * as db from "../lib/collections";
 Meteor.startup(() => {
 
     // Accounts.createUser({username: "root", password: "root", profile: {createUserKey: "Agent 404"}});
-
+    
     var moviesDB = db.Movies;
     moviesDB.remove({});
     if (moviesDB.find().count() == 0) {

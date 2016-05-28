@@ -1,19 +1,22 @@
 <template name="oneMovie">
     <div class="col-md-4 col-sm-6 hero-feature">
         <div class="thumbnail">
-            <img src="http://placehold.it/320x150">
-
+            <a href="/movie/{{_id}}">
+              <img src="http://placehold.it/320x150">
+            </a>
             <div class="caption">
-                <h3>{{title}}
-                    <small>{{prod}}</small>
-                </h3>
+                <a href="/movie/{{_id}}">
+                  <h3>{{title}}
+                      <small>{{prod}}</small>
+                  </h3>
+                </a>
                 <p>{{type}} | {{year}}</p>
 
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-success">
+                    <button type="button" class="btn btn-success up">
                         <span class="glyphicon glyphicon-thumbs-up"></span>
                     </button>
-                    <button type="button" class="btn btn-danger">
+                    <button type="button" class="btn btn-danger down">
                         <span class="glyphicon glyphicon-thumbs-down"></span>
                     </button>
                 </div>

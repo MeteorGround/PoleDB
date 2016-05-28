@@ -2,13 +2,13 @@
     <div class="container">
         <hr class="featurette-divider">
         <div class="featurette" id="about">
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+            <img class="featurette-image img-circle img-responsive" src="http://placehold.it/200x200">
 
-            <h2 class="featurette-heading">Title
-                <span class="text-muted">Prod</span>
+            <h2 class="featurette-heading"><h1>{{movie.title}}</h1>
+                <span class="text-muted"><h3>{{movie.prod}}</h3></span>
             </h2>
 
-            <p>The Title is a Type movie who was made at Year By Prod.</p>
+            <p>The {{movie.title}} is a {{movie.type}} movie who was made at {{movie.year}} By {{movie.prod}}.</p>
         </div>
         <hr class="featurette-divider">
     </div>
