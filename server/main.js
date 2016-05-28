@@ -13,8 +13,8 @@ Meteor.startup(() => {
 
     // DEV :  moviesDB.find().forEach((movie) => console.log(movie));
 
-    /*Accounts.config({
-     forbidClientAccountCreation: true,
-     });*/
-
+    /* Disallow SingIn */
+    // Accounts.config({
+    //   forbidClientAccountCreation: true,
+    // });
 });

@@ -1,4 +1,5 @@
 <template name="admin">
+    {{#if isAdmin}}
     <table class="table table-bordered table-striped table-hover table-responsive">
         <thead>
         <tr>
@@ -67,4 +68,9 @@
         {{/each}}
         </tbody>
     </table>
+    {{else}}
+      Hi ,You are in desert Bro, call <a href="/">911  !</a>
+    {{/if}}
+
+
 </template>

@@ -4,6 +4,12 @@ import { Session } from 'meteor/session';
 Template.admin.helpers({
     data(){
         return db.Movies.find();
+    },
+    isAdmin(){
+      if(Meteor.user() && Meteor.user().username === "root"){
+        return true;
+      }
+      return false;
     }
 });
 
